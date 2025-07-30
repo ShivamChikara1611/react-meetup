@@ -1,16 +1,27 @@
-import {NotFoundContainer, NotFoundHeading, NotFoundPara, Img} from './style'
+import styled from 'styled-components'
 
-const NotFound = () => (
-  <NotFoundContainer>
-    <Img
-      src="https://assets.ccbp.in/frontend/react-js/meetup/not-found-img.png"
-      alt="not found"
-    />
-    <NotFoundHeading>Page not Found</NotFoundHeading>
-    <NotFoundPara>
-      We are sorry, the page you requested could not be found.
-    </NotFoundPara>
-  </NotFoundContainer>
-)
+export const NotFoundContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+`
 
-export default NotFound
+export const NotFoundHeading = styled.h1`
+  color: #64748b;
+  font-size: 32px;
+  font-family: 'Roboto';
+`
+export const NotFoundPara = styled.p`
+  color: #7b8794;
+  font-size: 14px;
+  font-family: 'Roboto';
+`
+
+export const Img = styled.img`
+  height: 250px;
+  width: 250px;
+`
+
+export default NotFoundContainer
